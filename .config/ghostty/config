@@ -1,0 +1,5 @@
+#   /home/liam/.config/ghostty/config
+confirm-close-surface = false
+background = "black"
+background-opacity = 0.8
+
