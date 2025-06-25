@@ -36,7 +36,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -46,5 +46,9 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
+source <(fzf --zsh)
+
 # ALIASES
 alias fz='nvim "$(fzf --preview "cat {}" --preview-window=right:60%)"'
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
