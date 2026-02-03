@@ -1,11 +1,11 @@
 [global]
     # Geometry settings
-    width = (0, 300)          # Dynamic width up to 300 pixels
+    width = (0, 900)          # Dynamic width up to 300 pixels
     height = (0, 300)         # Dynamic height up to 300 pixels
     notification_limit = 4    # Maximum 4 notifications
     origin = top-left         # Anchor to top-left corner
     offset = (25, 25)         # 25 pixels from left, 25 pixels from top
-    follow = none             # Static positioning, overrides 'follow = mouse'
+    follow = mouse            # Static positioning, overrides 'follow = mouse'
 
     # Frame and appearance
     frame_width = 1
@@ -28,8 +28,8 @@
     show_indicators = yes     # Show URL/action indicators
     line_height = 0           # No extra line height
     separator_height = 1      # 1-pixel separator between notifications
-    padding = 8
-    horizontal_padding = 10
+    padding = 2
+    horizontal_padding = 2
     separator_color = "#263238"  # Separator color
 
     # Progress bar settings

@@ -50,5 +50,23 @@ source <(fzf --zsh)
 
 # ALIASES
 alias fz='nvim "$(fzf --preview "cat {}" --preview-window=right:60%)"'
+alias c='clicalq'
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+export PATH="$PATH:/home/liam/.local/bin"
+
+plugins=(
+    fzf-tab
+    )
+
+# Configure fzf-tab to complete on first tab instead of cycling
+zstyle ':fzf-tab:complete:*' fzf-bindings 'tab:accept'
+zstyle ':fzf-tab:*' accept-line yes
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  tmux attach-session -t default || tmux new-session -s default
+fi
